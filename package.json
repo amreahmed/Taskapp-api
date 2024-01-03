@@ -5,7 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node ./src/server.ts && node ./dist/server.js"
+    "dev": "ts-node ./src/server.ts && node ./dist/server.js",
+    "start": "node ./dist/server.js",
+    "build": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
