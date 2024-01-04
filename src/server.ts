@@ -9,7 +9,7 @@ import cors from "cors"
 
 const application = express();
 
-const application = express();
+
 const corsOptions = {
   origin: "*",
   methods: ["POST", "GET", "PATCH", "DELETE", "OPTIONS"],
