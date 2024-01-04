@@ -8,7 +8,14 @@ import cors from "cors"
 
 
 const application = express();
-application.use(cors());
+
+const application = express();
+const corsOptions = {
+  origin: "*",
+  methods: ["POST", "GET", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+application.use(cors(corsOptions));
 application.use(express.json());
 const port = 1337;
 connectToDatabase();
