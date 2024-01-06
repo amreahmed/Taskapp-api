@@ -137,7 +137,7 @@ export const getTasksForToday = async (
 
 
 
-export const editTask = async (request: AuthRequest, response: Response) => {
+export const editTask = async (request: authRequest, response: Response) => {
   try {
     const { _id, categoryId, date, name }: ITask = request.body
     await Task.updateOne(
@@ -159,6 +159,4 @@ export const editTask = async (request: AuthRequest, response: Response) => {
     throw error
   }
 }
-  }
-};
 
