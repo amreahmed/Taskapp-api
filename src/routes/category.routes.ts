@@ -4,6 +4,7 @@ import {
   getAllCategories,
   deleteCategory,
   updateCategory,
+  getCategoryById
 } from "../controllers/category.controller";
 import {authenicationMiddleware} from "../middleware";
 
@@ -16,6 +17,7 @@ categoryRoutes.use(authenicationMiddleware);
 categoryRoutes.route("/").get(getAllCategories)
 categoryRoutes.route("/create").post(createCategory);
 categoryRoutes.route("/delete/:id").delete(deleteCategory);
+categoryRoutes.route("/:id").get(getCategoryById);
 categoryRoutes.route("/update").put(updateCategory);
 
 
