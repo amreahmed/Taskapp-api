@@ -21,7 +21,7 @@ taskRouter.route("/update/:id").put(toggleTaskStatus);
 taskRouter.route("/delete/:id").delete(deleteTask);
 taskRouter.route("/completed").get(getAllCompletedTasks);
 taskRouter.route("/today").get(getTasksForToday);
-taskRouter.route("/edit/:id").put(editTask);
+taskRoutes.route("/edit/:id").put(editTask)
 
 
 export default taskRouter;
