@@ -17,7 +17,7 @@ const corsOptions = {
 };
 application.use(cors(corsOptions));
 application.use(express.json());
-const port = 1337;
+.listen(process.env.PORT || 1337)
 connectToDatabase();
 application.get("/ping", (request: Request, response: Response) => {
     response.send("pong");
