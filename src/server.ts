@@ -25,7 +25,7 @@ application.get("/ping", (request: Request, response: Response) => {
 
 application.use("/user", userRoutes);
 application.use("/category", categoryRoutes);
-application.use("/tasks", taskRoutes);
+application.use("/tasks", taskRouter);
 
 
 application.listen(port,()=> {
